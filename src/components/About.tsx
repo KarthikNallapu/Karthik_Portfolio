@@ -1,60 +1,52 @@
-
 import React from "react";
 
 const About = () => {
   return (
     <section id="about" className="bg-background/95 py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">About Me</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
+          About Me
+        </h2>
         <div className="w-20 h-1.5 bg-primary mx-auto mb-8 rounded-full"></div>
-        
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-left">
-            <p className="text-muted-foreground mb-4 text-justify">
-              Hello! I'm John, a passionate full-stack developer based in San Francisco, CA. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
+
+        <div className="flex justify-center">
+          <div className="max-w-3xl text-center">
+            <p className="text-muted-foreground mb-4">
+              Hello! I'm Karthik, a passionate developer and AI enthusiast from
+              Telangana, India. I specialize in building smart, scalable, and
+              interactive web applications with a focus on AI and data-driven
+              solutions.
             </p>
-            <p className="text-muted-foreground mb-4 text-justify">
-              My journey into web development started back in 2015 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+            <p className="text-muted-foreground mb-4">
+              My journey in technology began during my undergraduate years at
+              Hyderabad Institute of Technology and Management. I dove deep into
+              Python, machine learning, and web development while working on
+              real-world projects like an AI-Powered Career Counselor Website
+              and a Blockchain-Based Crowdfunding Platform.
             </p>
-            <p className="text-muted-foreground mb-6 text-justify">
-              Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, and a large corporation. My main focus these days is building accessible, inclusive products and digital experiences.
+            <p className="text-muted-foreground mb-6">
+              With hands-on experience in freelancing, internships, and
+              publishing research, I’ve continuously pushed my learning
+              boundaries. I'm currently seeking exciting opportunities where I
+              can contribute to innovative tech solutions and continue growing
+              as a developer.
             </p>
-            
+
             <div className="flex gap-4 justify-center">
-              <a href="#contact" className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors">
+              <a
+                href="#contact"
+                className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+              >
                 Contact Me
               </a>
-              <a href="#" className="px-6 py-2 border border-border rounded-full hover:bg-secondary transition-colors">
+              <a
+                href="https://drive.google.com/file/d/your-cv-link"
+                className="px-6 py-2 border border-border rounded-full hover:bg-secondary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Download CV
               </a>
-            </div>
-          </div>
-          
-          <div className="bg-secondary/20 p-6 rounded-xl space-y-4 border border-border mx-auto w-full max-w-md">
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-center">Personal Information</h3>
-              <ul className="space-y-2">
-                <li className="flex justify-between">
-                  <span className="text-muted-foreground">Name:</span>
-                  <span>John Doe</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-muted-foreground">Age:</span>
-                  <span>30 Years</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-muted-foreground">Location:</span>
-                  <span>San Francisco, CA</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-muted-foreground">Experience:</span>
-                  <span>7+ Years</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-muted-foreground">Freelance:</span>
-                  <span>Available</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

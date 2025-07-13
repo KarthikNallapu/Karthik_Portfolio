@@ -1,38 +1,91 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="min-h-[90vh] flex items-center justify-center py-8 bg-background">
+    <section
+      id="home"
+      className="min-h-[90vh] flex items-center justify-center py-8 bg-background"
+    >
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Section - Text Content */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-primary">John Doe</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 whitespace-nowrap">
+              Hi, I'm <span className="text-primary">Nallapu Karthik</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">Full Stack Developer</h2>
-            <p className="text-muted-foreground mb-8 text-lg">
-              I build exceptional and accessible digital experiences for the web.
+            <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+              AI & Web Developer
+            </h2>
+            <p className="text-muted-foreground text-md italic mb-4">
+              "Building smart solutions that matter."
             </p>
-            <div className="flex gap-4 justify-center w-full md:w-auto md:justify-start">
-              <Button size="lg" className="rounded-full" onClick={() => scrollToSection('projects')}>View My Work</Button>
-              <Button size="lg" variant="outline" className="rounded-full" onClick={() => scrollToSection('contact')}>Contact Me</Button>
+            <p className="text-muted-foreground mb-4 text-lg">
+              With a strong foundation in AI, web development, and data
+              analytics, I transform ideas into scalable, intelligent
+              applications. Experienced in working with modern tech like React,
+              Node.js, Flask, and machine learning.
+            </p>
+            <ul className="text-muted-foreground mb-6 text-base list-disc pl-5 space-y-1 text-left">
+              <li>🎯 Passionate about AI & real-world automation</li>
+              <li>📊 Experienced in ML projects and dashboards</li>
+              <li>💼 Freelancer working on scalable web apps</li>
+            </ul>
+            <div className="flex gap-4 justify-center w-full md:w-auto md:justify-start mb-4">
+              <Button
+                size="lg"
+                className="rounded-full"
+                onClick={() => scrollToSection("projects")}
+              >
+                View My Work
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full"
+                onClick={() => scrollToSection("contact")}
+              >
+                Contact Me
+              </Button>
+            </div>
+            <div className="flex gap-4 text-xl text-primary mt-2">
+              <a
+                href="https://www.linkedin.com/in/karthiknallapu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://github.com/KarthikNallapu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a href="mailto:karthiknallapu450@gmail.com">
+                <FaEnvelope />
+              </a>
             </div>
           </div>
-          
+
+          {/* Right Section - Profile Image */}
           <div className="flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-3xl text-white/70">JD</div>
+              <img
+                src="src/components/20170831235520_IMG_2643.JPG"
+                alt="Nallapu Karthik"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
