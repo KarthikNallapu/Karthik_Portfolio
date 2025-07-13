@@ -82,8 +82,7 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30">
               <img
-                src="src/components/20170831235520_IMG_2643.JPG"
-                alt="Nallapu Karthik"
+                src="src\components\Profile.JPG"
                 className="w-full h-full object-cover"
               />
             </div>
