@@ -24,7 +24,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
@@ -47,63 +46,98 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col lg:flex-row gap-10 items-start">
-          {/* Contact Information */}
-          <div className="w-full lg:w-2/5 bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm space-y-6">
-            <div className="flex items-center gap-4">
-              <Mail className="text-primary" size={22} />
-              <a
-                href="mailto:karthiknallapu450@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                karthiknallapu450@gmail.com
-              </a>
+          {/* Left Column */}
+          <div className="w-full lg:w-1/2 space-y-12">
+            {/* Contact Info */}
+            <div className="bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm space-y-6 text-center">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                Contact Information
+              </h3>
+
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-start w-fit gap-3">
+                  <Mail className="text-primary" size={28} />
+                  <a
+                    href="mailto:karthiknallapu450@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                  >
+                    karthiknallapu450@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-start w-fit gap-3">
+                  <Phone className="text-primary" size={28} />
+                  <a
+                    href="tel:+919550788322"
+                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                  >
+                    +91 95507 88322
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-start w-fit gap-3">
+                  <MapPin className="text-primary" size={28} />
+                  <p className="text-muted-foreground text-lg">
+                    Telangana, India
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <MapPin className="text-primary" size={22} />
-              <p className="text-muted-foreground text-sm">Telangana, India</p>
-            </div>
+            {/* Social Networks */}
+            <div className="bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm text-center space-y-4">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                Social Networks
+              </h3>
 
-            <div className="flex items-center gap-4">
-              <Phone className="text-primary" size={22} />
-              <a
-                href="tel:+919550788322"
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                +91 95507 88322
-              </a>
-            </div>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-start w-fit gap-3">
+                  <Github className="text-primary" size={28} />
+                  <a
+                    href="https://github.com/KarthikNallapu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
 
-            <div className="pt-4 text-left">
-              <div className="flex justify-start gap-4">
-                <a
-                  href="https://github.com/KarthikNallapu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
-                >
-                  <Github size={20} className="text-primary" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/karthiknallapu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin size={20} className="text-primary" />
-                </a>
-                <a
-                  href="#"
-                  className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
-                >
-                  <Twitter size={20} className="text-primary" />
-                </a>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-start w-fit gap-3">
+                  <Linkedin className="text-primary" size={28} />
+                  <a
+                    href="https://linkedin.com/in/karthiknallapu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-start w-fit gap-3">
+                  <Twitter className="text-primary" size={28} />
+                  <a
+                    href="#"
+                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                  >
+                    Twitter
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="w-full lg:w-3/5 bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm">
+          {/* Right Column: Contact Form */}
+          <div className="w-full lg:w-1/2 bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm">
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

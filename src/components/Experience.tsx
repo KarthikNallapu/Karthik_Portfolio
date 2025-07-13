@@ -53,9 +53,14 @@ const Experience = () => {
 
                 {/* Content */}
                 <div className="bg-background p-6 rounded-xl border border-border hover:shadow-md transition-shadow">
-                  <h3 className="text-xl font-semibold text-primary">
+                  <h3
+                    className={`text-xl font-semibold text-primary ${
+                      index === 0 ? "text-center" : ""
+                    }`}
+                  >
                     {exp.position}
                   </h3>
+
                   <div className="flex items-center gap-2 mb-3 mt-1">
                     <span className="font-medium">{exp.company}</span>
                     <span className="text-muted-foreground">|</span>
