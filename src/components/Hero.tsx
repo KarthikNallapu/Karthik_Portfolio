@@ -24,21 +24,22 @@ const Hero = () => {
               Hi, I'm <span className="text-primary">Nallapu Karthik</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-2">
-              AI & Web Developer
+              AI & Data Analytics Enthusiast
             </h2>
             <p className="text-muted-foreground text-md italic mb-4">
-              "Building smart solutions that matter."
+              "Building intelligent systems that solve real problems."
             </p>
             <p className="text-muted-foreground mb-4 text-lg">
-              With a strong foundation in AI, web development, and data
-              analytics, I transform ideas into scalable, intelligent
-              applications. Experienced in working with modern tech like React,
-              Node.js, Flask, and machine learning.
+              Passionate about AI, machine learning, and data-driven solutions.
+              Experienced in developing intelligent agents, deploying ML models,
+              and delivering insights through analytics.
             </p>
             <ul className="text-muted-foreground mb-6 text-base list-disc pl-5 space-y-1 text-left">
-              <li>🎯 Passionate about AI & real-world automation</li>
-              <li>📊 Experienced in ML projects and dashboards</li>
-              <li>💼 Freelancer working on scalable web apps</li>
+              <li>Working on AI agents & LLM-integrated applications</li>
+              <li>Experienced in data preprocessing and ML pipelines</li>
+              <li>Hands-on with visualization & dashboard tools</li>
+              <li>Research-focused with a published paper in IJIRT</li>
+              <li>Freelancing in AI/ML projects across domains</li>
             </ul>
             <div className="flex gap-4 justify-center w-full md:w-auto md:justify-start mb-4">
               <Button
@@ -82,7 +83,8 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30">
               <img
-                src="src\components\Profile.JPG"
+                src="/PRO.jpeg" // moved to public/ directory
+                alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
