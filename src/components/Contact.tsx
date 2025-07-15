@@ -56,7 +56,7 @@ const Contact = () => {
               </h3>
 
               <div className="flex items-center gap-3">
-                <Mail className="text-primary" size={20} />
+                <Mail className="text-primary" size={24} />
                 <a
                   href="mailto:karthiknallapu450@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
