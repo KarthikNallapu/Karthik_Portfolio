@@ -76,7 +76,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <p
-                  className="text-muted-foreground mb-4 text-sm"
+                  className="text-muted-foreground mb-4 text-sm text-justify"
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {project.description}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Experience = () => {
   const experiences = [
@@ -25,50 +25,87 @@ const Experience = () => {
     },
   ];
 
+  const timelineRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [visibleIndex, setVisibleIndex] = useState(-1);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setVisibleIndex(i);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    timelineRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      timelineRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
   return (
     <section id="experience" className="bg-secondary/30 py-20">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
           Work Experience
         </h2>
-        <div className="w-20 h-1.5 bg-primary mx-auto mb-12 rounded-full"></div>
+        <div className="w-20 h-1.5 bg-primary mx-auto mb-12 rounded-full" />
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-px bg-border"></div>
+          {/* Full Timeline Line */}
+          <div className="absolute left-1.5 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-px bg-border" />
 
-          {/* Experience items */}
+          {/* Experience Cards */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative ${
-                  index % 2 === 0
-                    ? "md:pr-12 md:text-right md:ml-auto md:mr-0"
-                    : "md:pl-12 md:ml-0 md:mr-auto"
-                } md:w-1/2 pl-10 md:pl-0`}
+                className={`relative flex flex-col md:flex-row md:items-start md:gap-8 ${
+                  index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                }`}
+                ref={(el) => (timelineRefs.current[index] = el)}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                {/* Timeline Dot & Line Fill */}
+                <div className="absolute left-1.5 md:left-1/2 transform md:-translate-x-1/2 top-2">
+                  <div className="w-3 h-3 rounded-full bg-primary z-10" />
+                  <div
+                    className={`absolute top-3 left-1/2 transform -translate-x-1/2 w-px h-full transition-all duration-700 ${
+                      visibleIndex >= index ? "bg-primary" : "bg-border"
+                    }`}
+                  />
+                </div>
 
-                {/* Content */}
-                <div className="bg-background p-6 rounded-xl border border-border hover:shadow-md transition-shadow">
+                {/* Experience Content */}
+                <div
+                  className={`bg-background p-6 rounded-xl border border-border hover:shadow-md transition-shadow md:w-1/2 ${
+                    index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
+                  }`}
+                >
                   <h3
                     className={`text-xl font-semibold text-primary ${
-                      index === 0 ? "text-center" : ""
+                      index === 0 ? "text-center md:text-left" : "text-left"
                     }`}
                   >
                     {exp.position}
                   </h3>
-
-                  <div className="flex items-center gap-2 mb-3 mt-1">
-                    <span className="font-medium">{exp.company}</span>
-                    <span className="text-muted-foreground">|</span>
-                    <span className="text-sm text-muted-foreground">
-                      {exp.period}
+                  <div className="flex items-center gap-2 mb-3 mt-1 text-muted-foreground text-sm">
+                    <span className="font-medium text-foreground">
+                      {exp.company}
                     </span>
+                    <span>|</span>
+                    <span>{exp.period}</span>
                   </div>
-                  <p className="text-muted-foreground">{exp.description}</p>
+                  <p className="text-muted-foreground text-justify text-sm">
+                    {exp.description}
+                  </p>
                 </div>
               </div>
             ))}

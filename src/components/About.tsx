@@ -12,24 +12,27 @@ const About = () => {
         <div className="flex justify-center">
           <div className="max-w-3xl text-center">
             <p className="text-muted-foreground mb-4">
-              Hello! I'm Karthik, a passionate developer and AI enthusiast from
-              Telangana, India. I specialize in building smart, scalable, and
-              interactive web applications with a focus on AI and data-driven
-              solutions.
+              Hello! I'm Karthik, an AI and data analytics enthusiast from
+              Telangana, India, with a passion for solving real-world problems
+              through intelligent systems. I specialize in building AI-powered
+              applications, deploying machine learning models, and transforming
+              data into meaningful insights.
             </p>
             <p className="text-muted-foreground mb-4">
-              My journey in technology began during my undergraduate years at
-              Hyderabad Institute of Technology and Management. I dove deep into
-              Python, machine learning, and web development while working on
-              real-world projects like an AI-Powered Career Counselor Website
-              and a Blockchain-Based Crowdfunding Platform.
+              My journey began during my undergraduate studies at Hyderabad
+              Institute of Technology and Management, where I explored Python,
+              machine learning, and web development. From developing an
+              AI-powered Career Counselor platform to publishing a research
+              paper on a Blockchain-based Crowdfunding System, I’ve applied my
+              skills across diverse domains.
             </p>
             <p className="text-muted-foreground mb-6">
-              With hands-on experience in freelancing, internships, and
-              publishing research, I’ve continuously pushed my learning
-              boundaries. I'm currently seeking exciting opportunities where I
-              can contribute to innovative tech solutions and continue growing
-              as a developer.
+              With hands-on experience in freelancing, data analysis, LLM-based
+              agent development, and internships like the Accenture Virtual
+              Experience, I’ve grown both technically and professionally. I
+              enjoy working on projects that combine intelligence and impact —
+              and I’m currently seeking opportunities to contribute to AI-driven
+              innovations and continue pushing my boundaries as a developer.
             </p>
 
             <div className="flex gap-4 justify-center">

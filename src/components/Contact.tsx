@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { SiX } from "react-icons/si"; // <-- New Twitter/X icon
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,91 +48,77 @@ const Contact = () => {
 
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           {/* Left Column */}
-          <div className="w-full lg:w-1/2 space-y-12">
+          <div className="w-full lg:w-1/2 flex flex-col justify-between space-y-12">
             {/* Contact Info */}
-            <div className="bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm space-y-6 text-center">
-              <h3 className="text-2xl font-semibold mb-4 text-center">
+            <div className="bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm space-y-6 text-left">
+              <h3 className="text-2xl font-semibold mb-4">
                 Contact Information
               </h3>
 
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-start w-fit gap-3">
-                  <Mail className="text-primary" size={28} />
-                  <a
-                    href="mailto:karthiknallapu450@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                  >
-                    karthiknallapu450@gmail.com
-                  </a>
-                </div>
+              <div className="flex items-center gap-3">
+                <Mail className="text-primary" size={28} />
+                <a
+                  href="mailto:karthiknallapu450@gmail.com"
+                  className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                >
+                  karthiknallapu450@gmail.com
+                </a>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-start w-fit gap-3">
-                  <Phone className="text-primary" size={28} />
-                  <a
-                    href="tel:+919550788322"
-                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                  >
-                    +91 95507 88322
-                  </a>
-                </div>
+              <div className="flex items-center gap-3">
+                <Phone className="text-primary" size={28} />
+                <a
+                  href="tel:+919550788322"
+                  className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                >
+                  +91 95507 88322
+                </a>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-start w-fit gap-3">
-                  <MapPin className="text-primary" size={28} />
-                  <p className="text-muted-foreground text-lg">
-                    Telangana, India
-                  </p>
-                </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="text-primary" size={28} />
+                <p className="text-muted-foreground text-lg">
+                  Telangana, India
+                </p>
               </div>
             </div>
 
             {/* Social Networks */}
-            <div className="bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm text-center space-y-4">
-              <h3 className="text-2xl font-semibold mb-4 text-center">
-                Social Networks
-              </h3>
+            <div className="bg-secondary/10 p-8 rounded-2xl border border-border/50 shadow-sm text-left space-y-4">
+              <h3 className="text-2xl font-semibold mb-4">Social Networks</h3>
 
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-start w-fit gap-3">
-                  <Github className="text-primary" size={28} />
-                  <a
-                    href="https://github.com/KarthikNallapu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                  >
-                    GitHub
-                  </a>
-                </div>
+              <div className="flex items-center gap-3">
+                <Github className="text-primary" size={28} />
+                <a
+                  href="https://github.com/KarthikNallapu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                >
+                  GitHub
+                </a>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-start w-fit gap-3">
-                  <Linkedin className="text-primary" size={28} />
-                  <a
-                    href="https://linkedin.com/in/karthiknallapu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
+              <div className="flex items-center gap-3">
+                <Linkedin className="text-primary" size={28} />
+                <a
+                  href="https://linkedin.com/in/karthiknallapu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                >
+                  LinkedIn
+                </a>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-start w-fit gap-3">
-                  <Twitter className="text-primary" size={28} />
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                  >
-                    Twitter
-                  </a>
-                </div>
+              <div className="flex items-center gap-3">
+                <SiX className="text-primary" size={26} />
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                >
+                  Twitter
+                </a>
               </div>
             </div>
           </div>

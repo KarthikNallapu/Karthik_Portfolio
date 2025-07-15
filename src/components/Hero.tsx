@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
@@ -14,13 +13,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-[90vh] flex items-center justify-center py-8 bg-background"
+      className="min-h-[90vh] flex items-center justify-center pt-28 sm:pt-32 md:pt-20 py-8 bg-background"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Section - Text Content */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 whitespace-nowrap">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 whitespace-normal">
               Hi, I'm <span className="text-primary">Nallapu Karthik</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-2">
@@ -41,7 +40,9 @@ const Hero = () => {
               <li>Research-focused with a published paper in IJIRT</li>
               <li>Freelancing in AI/ML projects across domains</li>
             </ul>
-            <div className="flex gap-4 justify-center w-full md:w-auto md:justify-start mb-4">
+
+            {/* Button + Icons in a Row */}
+            <div className="flex flex-wrap items-center gap-4 justify-center md:justify-start w-full md:w-auto mb-4">
               <Button
                 size="lg"
                 className="rounded-full"
@@ -49,33 +50,27 @@ const Hero = () => {
               >
                 View My Work
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full"
-                onClick={() => scrollToSection("contact")}
-              >
-                Contact Me
-              </Button>
-            </div>
-            <div className="flex gap-4 text-xl text-primary mt-2">
-              <a
-                href="https://www.linkedin.com/in/karthiknallapu/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://github.com/KarthikNallapu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-              </a>
-              <a href="mailto:karthiknallapu450@gmail.com">
-                <FaEnvelope />
-              </a>
+
+              {/* Social Icons */}
+              <div className="flex gap-3 text-xl text-primary">
+                <a
+                  href="https://www.linkedin.com/in/karthiknallapu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin size={28} />
+                </a>
+                <a
+                  href="https://github.com/KarthikNallapu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub size={28} />
+                </a>
+                <a href="mailto:karthiknallapu450@gmail.com">
+                  <FaEnvelope size={28} />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -83,7 +78,7 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30">
               <img
-                src="/PRO.jpeg" // moved to public/ directory
+                src="/PRO.jpeg" // Make sure this image is placed in the public/ folder
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
