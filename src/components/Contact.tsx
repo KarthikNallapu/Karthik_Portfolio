@@ -55,18 +55,18 @@ const Contact = () => {
                 Contact Information
               </h3>
 
-              <div className="flex items-start gap-3 flex-wrap break-words">
-                <Mail className="text-primary mt-1" size={28} />
+              <div className="flex items-center gap-3">
+                <Mail className="text-primary" size={20} />
                 <a
                   href="mailto:karthiknallapu450@gmail.com"
-                  className="text-muted-foreground hover:text-primary transition-colors text-lg break-words"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   karthiknallapu450@gmail.com
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="text-primary" size={28} />
+                <Phone className="text-primary" size={24} />
                 <a
                   href="tel:+919550788322"
                   className="text-muted-foreground hover:text-primary transition-colors text-lg"
@@ -76,7 +76,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-3">
-                <MapPin className="text-primary" size={28} />
+                <MapPin className="text-primary" size={24} />
                 <p className="text-muted-foreground text-lg">
                   Telangana, India
                 </p>
