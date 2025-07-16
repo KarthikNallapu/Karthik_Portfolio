@@ -41,6 +41,12 @@ const Navbar = () => {
               Experience
             </a>
             <a
+              href="#certifications"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Certifications
+            </a>
+            <a
               href="#contact"
               className="text-foreground hover:text-primary transition-colors"
             >

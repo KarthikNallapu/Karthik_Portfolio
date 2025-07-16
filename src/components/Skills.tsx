@@ -75,7 +75,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-background p-6 rounded-xl border border-border hover:shadow-md transition-shadow"
+              className="bg-background p-6 rounded-xl border border-border hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <h3 className="text-xl font-semibold mb-4 text-primary">
                 {category.category}
@@ -84,7 +84,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-3 py-1 bg-secondary/50 rounded-full text-sm transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+                    className="px-3 py-1 bg-secondary/50 rounded-full text-sm"
                   >
                     {skill}
                   </span>

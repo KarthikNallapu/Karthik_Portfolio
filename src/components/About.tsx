@@ -43,10 +43,9 @@ const About = () => {
                 Contact Me
               </a>
               <a
-                href="https://drive.google.com/file/d/your-cv-link"
+                href="/Karthik_Resume.pdf"
+                download
                 className="px-6 py-2 border border-border rounded-full hover:bg-secondary transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Download CV
               </a>

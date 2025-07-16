@@ -85,7 +85,7 @@ const Experience = () => {
 
                 {/* Experience Content */}
                 <div
-                  className={`bg-background p-6 rounded-xl border border-border hover:shadow-md transition-shadow md:w-1/2 ${
+                  className={`bg-background p-6 rounded-xl border border-border md:w-1/2 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
                     index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
                   }`}
                 >
