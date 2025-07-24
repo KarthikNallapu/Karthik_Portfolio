@@ -66,4 +66,3 @@ Feel free to reach out via the [Contact](#contact) section on the website if you
 
 ---
 
-Let me know if you want a **short sidebar description** or markdown badges/logos added.
